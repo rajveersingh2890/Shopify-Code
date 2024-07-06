@@ -1,0 +1,95 @@
+<div class="hideAll">
+  <p><span>Extra Info 1: </span><span class="variant_data_1"></span></p>
+</div>
+
+{% capture meta_data_1 %}
+  {
+  {% for variant in product.variants %}
+    "{{ variant.id }}": {{ variant.metafields.custom.variant_data_1 | json }}{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+  }
+{% endcapture %}
+<script>
+  const metaData = {{ meta_data_1 | strip_newlines }};
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const metaData = {{ meta_data_1 | strip_newlines }};
+  const hideAllDiv = document.querySelector('.hideAll');
+  const variantData1Span = document.querySelector('.variant_data_1');
+
+  const updateVariantInfo = (variantId) => {
+    if (metaData[variantId]) {
+      hideAllDiv.style.display = 'block';
+      variantData1Span.textContent = metaData[variantId];
+    } else {
+      hideAllDiv.style.display = 'none';
+    }
+  };
+
+  const handleVariantChange = (event) => {
+    const selectedVariantId = event.target.value;
+    updateVariantInfo(selectedVariantId);
+  };
+
+  const initialVariantId = {{ product.selected_or_first_available_variant.id }};
+  updateVariantInfo(initialVariantId);
+
+  document.querySelectorAll('input[name="id"]').forEach(input => {
+    input.addEventListener('change', function(event) {
+      const selectedVariantId = event.target.value;
+      updateVariantInfo(selectedVariantId);
+    });
+  });
+});
+
+</script>
+
+
+
+
+product variant contains change metafield shopify code
+https://kisna.com/
+
+<div class="hideAll">
+  <p style="color:#24125F; padding-bottom:5px;font-family: 'Work Sans';"><b><span class="variant_data_1"></span></b></p>
+</div>
+
+{% capture meta_data %}
+  {% for variant in product.variants %}
+    "{{ variant.id }}": "{{ variant.metafields.custom.usually_ships_days | escape }}"{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+{% endcapture %}
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  let metaData = { {{ meta_data | strip_newlines }} };
+  let selector = document.querySelector('select[name="id"]');
+  
+  if (selector) {
+    selector.addEventListener('change', function() {
+      let variant_id = this.value;
+      if (!variant_id) return;
+
+      let material = metaData[variant_id],
+          meta = document.querySelector('.variant_data_1');
+
+      if (material && meta) {
+        meta.innerHTML = material;
+      }
+    });
+
+    let firstVariantOption = selector.querySelector('option');
+    if (firstVariantOption) {
+      selector.value = firstVariantOption.value;
+      selector.dispatchEvent(new Event('change'));
+    }
+  }
+});
+</script>
+
+https://kisna.com/
+
+product variant contains change metafield shopify code
+
