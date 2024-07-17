@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Flow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        header {
+            text-align: center;
+            background: #fff;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            background: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 24px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .faq-item {
+            margin: 20px 0;
+        }
+
+        .faq-item h3 {
+            cursor: pointer;
+            margin: 0;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item .faq-answer {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .icon {
+            font-size: 24px;
+            line-height: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>FAQs</h1>
+        <p>Got questions?<br>We've got answers.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about-flow">About Flow</a></li>
+            <li><a href="#all-in-one-tool">All-In-One Tool</a></li>
+            <li><a href="#powerful-features">Powerful Features</a></li>
+            <li><a href="#security-service">Security & Service</a></li>
+            <li><a href="#simple-pricing">Simple Pricing</a></li>
+        </ul>
+    </nav>
+
+    <section id="about-flow">
+        <h2>About Flow</h2>
+        <div class="faq-item">
+            <h3>How does the free trial work? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>Can we cancel at any time? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>Do you support guest accounts? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+    </section>
+
+    <section id="all-in-one-tool">
+        <h2>All-In-One Tool</h2>
+        <div class="faq-item">
+            <h3>What are my payment options? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>What currency can I pay in? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>How does adding and removing licenses work? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>Do you offer discounts for education or non-profits? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>What’s your refund policy? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+    </section>
+
+    <section id="powerful-features">
+        <h2>Powerful Features</h2>
+        <div class="faq-item">
+            <h3>What are my payment options? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>What currency can I pay in? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>How does adding and removing licenses work? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>Do you offer discounts for education or non-profits? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>What’s your refund policy? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+    </section>
+
+    <section id="security-service">
+        <h2>Security & Service</h2>
+        <div class="faq-item">
+            <h3>What are my payment options? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>What currency can I pay in? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>How does adding and removing licenses work? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>Do you offer discounts for education or non-profits? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>What’s your refund policy? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+    </section>
+
+    <section id="simple-pricing">
+        <h2>Simple Pricing</h2>
+        <div class="faq-item">
+            <h3>What are my payment options? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>What currency can I pay in? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>How does adding and removing licenses work? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>Do you offer discounts for education or non-profits? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+        <div class="faq-item">
+            <h3>What’s your refund policy? <span class="icon">+</span></h3>
+            <div class="faq-answer">[Answer]</div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const items = document.querySelectorAll(".faq-item h3");
+
+            items.forEach(item => {
+                item.addEventListener("click", function () {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('.icon');
+
+                    if (answer.style.display === "block") {
+                        answer.style.display = "none";
+                        icon.textContent = '+';
+                    } else {
+                        answer.style.display = "block";
+                        icon.textContent = '-';
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
