@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none !important;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
+  body {
+    height: 100%;
+    background: url('https://horizon-media.s3-eu-west-1.amazonaws.com/s3fs-public/field/image/ecosystem.jpg');
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center center;
+  }
+
+  body:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  label {
+    color: #fff;
+  }
+
+  #page-wrapper,
+  #htmlView {
+    float: left;
+    width: 100%;
+    margin: 30px 0 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .list-group-item {
+    padding: 0.75rem 1.25rem;
+    border: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  .card {
+    position: relative;
+    border: 1px solid #fff;
+    border-radius: 0.25rem;
+    float: left;
+    width: 100%;
+    margin: 0 0 10px;
+    padding: 10px;
+    color: #fff;
+  }
+
+  .card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+  }
+
+  .card-text:last-child {
+    margin-bottom: 0;
+  }
+
+  .card-title {
+    margin: 0 0 0.75rem;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .list-group {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  #submit {
+    background: #00bcd4;
+    border: 0;
+    color: #fff;
+  }
+
+  .list-group-item h4 {
+    margin: 0 0 15px;
+  }
+
+  .underline {
+    text-decoration: underline;
+    color: #fff;
+  }
+
+  #msg {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    color: #fff;
+    background: #4ebcd4;
+    padding: 5px 5px 5px 13px;
+    border-radius: 3px;
+    z-index: 1;
+  }
+
+  #msg span {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 0 6px 0 10px;
+  }
+
+  .slick-slide .slide-content {
+    margin: 0 10%;
+    padding: 50px 100px;
+    background: #fff;
+  }
+
+  .slick-list {
+    margin: 20px 0px;
+  }
+
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    right: 4%;
+    background: #fff;
+    border: none;
+    color: transparent;
+    width: 30px;
+    padding: 3px 0 5px 10px;
+    box-sizing: border-box;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    content: ">";
+    color: #000;
+    font-size: 16px;
+  }
+
+  .slick-prev {
+    left: calc(50% - 40px);
+  }
+
+  .slick-next {
+    right: calc(50% - 40px);
+  }
+
+  .slick-disabled {
+    display: none;
+  }
+
+  .slick-prev:before {
+    content: "<";
+  }
+
+  .slick-dots {
+    list-style: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .slick-dots li {
+    display: inline-block;
+  }
+
+  .slick-dots li button {
+    transition: 0.2s background-color ease-in-out 0s;
+    border: none;
+    padding: 0;
+    color: transparent;
+    width: 10px;
+    height: 10px;
+    background-color: #777;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
+  .slick-dots li.slick-active button {
+    background-color: #4ebcd4;
+  }	
+</style>
+<link rel="stylesheet" type="text/css" href="https://getbootstrap.com/docs/3.4/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css">
+</head>
+<body>
+<div id="page-wrapper">
+  <center>
+  <a style="color:#fff; font-size:24px; font-weight:700;text-decoration:underline;" href="https://javascript-html-5.blogspot.com/2022/09/implement-onlineoffline-feature-in.html" target=_blank>Visit Our Blog</a>
+</center><br />
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-4" id="form-sec">
+          <form>
+            <div class="form-group">
+              <label for="text">Enter Indian Pincode</label>
+              <input type="text" class="form-control" id="text" placeholder="Enter Pincode" maxlength="6"
+                onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+            </div>
+            <button id="submit" type="button" class="btn btn-default btn-lg btn-block">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+  <div id="total-msg"></div>
+  <div id="htmlView">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" style="padding: 0;">
+          <div id="mkslider">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script type="text/javascript">
+	
+document.addEventListener("DOMContentLoaded", function (event) {
+    function searchPin() {
+      let pin = document.getElementById("text").value;
+      $.getJSON("https://api.postalpincode.in/pincode/" + pin, function (data) {
+        createHTML(data);
+      })
+      function createHTML(data) {
+        var htmlElements = " ";
+        var msg = "";
+        msg += '<div id="msg">' + data[0].Message + '<span id="close">X</span></div>'
+        if (data[0].PostOffice && data[0].PostOffice.length) {
+          for (var i = 0; i < data[0].PostOffice.length; i++) {
+            if (data[0].PostOffice.length > 3) {
+              document.getElementById("mkslider").classList.add("sliders");
+            }
+            else {
+              document.getElementById("mkslider").removeAttribute("class");
+            }
+            htmlElements += '<div class="col-sm-4"><div class="card"><div class="list-group"><h4>' + data[0].PostOffice[i].Name + '<small class="pull-right underline">' + data[0].PostOffice[i].Block + '</small></h4><p>District: <span class="pull-right">' + data[0].PostOffice[i].District + '</span></p><p>PostOffice :<span class="pull-right">' + data[0].PostOffice[i].State + '</span></p></div></div></div></div>'
+          }
+        }
+        else {
+          alert('Enter Valid pincode');
+        }
+        var htmlView = document.getElementById("mkslider");
+        htmlView.innerHTML = htmlElements;
+        var msgView = document.getElementById("total-msg");
+        msgView.innerHTML = msg;
+        createSlider();
+      }
+      setTimeout(function () {
+        $('#close').trigger('click');
+      }, 3000);
+    }
+
+    $(document).on("click", '#close', function () {
+      $('#total-msg').remove();
+    });
+
+    function createSlider() {
+      $('.sliders').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 3,
+        arrows: true,
+        slidesToScroll: 1,
+        autoplay: true,
+        responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    }
+    document.getElementById("submit").addEventListener("click", searchPin);
+  });
+</script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+</body>
+</html>
