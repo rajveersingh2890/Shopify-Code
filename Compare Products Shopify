@@ -1,0 +1,300 @@
+<style>
+  .compare-products-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .compare-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    max-width: 850px;
+    width: 100%;
+  }
+  .compare-container .product-compare .compare-dropdown {
+      border: 1px solid #000;
+      padding: 5px;
+      border-radius: 3px;
+  }
+  .compare-container .compare-variants select.variant-select {
+      border: 1px solid #000;
+      padding: 5px 20px 5px 5px;
+      border-radius: 3px;
+      width: 100%;
+  }
+  .product-compare {
+    width: 45%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .product-detail-card {
+    margin-top: 10px;
+    border: 1px solid #000;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    background: #f9f9f9;
+  }
+
+.product-detail-card .compare-products-row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y)* -1);
+    margin-right: calc(var(--bs-gutter-x)* -.5);
+    margin-left: calc(var(--bs-gutter-x)* -.5);
+}
+.compare-products-row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+.col-md-4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+    display: flex;
+    align-items: center;
+}
+.col-md-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+    display: flex;
+    align-items: center;
+}
+.col-md-12 {
+    flex: 0 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.compare-products-row {
+    text-align: start;
+}
+.product-details .product-detail-card hr {margin-top: 10px !important;!i;!;margin-bottom: 10px !important;}
+.product-details .product-detail-card .compare-products-addtocart {
+    background: #cb1724;
+    color: #fff;
+    padding: 7px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+.compare-products-row p span {
+    color: #000 !important;
+}
+
+@media (max-width: 676px) {
+  .col-12 {
+      flex: 0 0 auto;
+      width: 100%;
+      display: flex;
+      align-items: center;
+  }
+  .compare-container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      margin: 20px 0;
+      flex-direction: column;
+  }
+  .product-compare {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+}
+</style>
+<div class="compare-products-page">
+  <div class="compare-container">
+    <div class="product-compare">
+      <select id="product1" class="compare-dropdown">
+        <option value="">Select a product</option>
+        {% for product in collections.all.products %}
+          <option value="{{ product.handle }}">{{ product.title }}</option>
+        {% endfor %}
+      </select>
+      <div id="product1-details" class="product-details"></div>
+    </div>
+  
+    <div class="product-compare">
+      <select id="product2" class="compare-dropdown">
+        <option value="">Select a product</option>
+        {% for product in collections.all.products %}
+          <option value="{{ product.handle }}">{{ product.title }}</option>
+        {% endfor %}
+      </select>
+      <div id="product2-details" class="product-details"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const fetchProductDetails = async (productHandle) => {
+  try {
+    const response = await fetch(`/products/${productHandle}.js`);
+    if (!response.ok) {
+      throw new Error(`Error fetching product: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Fetch error:', error);
+    throw error;
+  }
+};
+
+const formatMoney = (amount) =>
+  typeof Shopify !== 'undefined' && Shopify.formatMoney
+    ? Shopify.formatMoney(amount)
+    : `₹&nbsp;${(amount / 100).toFixed(2)}`;
+
+const renderProductDetails = (container, product, metafields, dropdownId) => {
+  const { title, images, variants, description } = product;
+  const image = images[0] || '/path-to-placeholder-image.jpg';
+  const price = formatMoney(variants[0].price);
+  const comparePrice = variants[0].compare_at_price
+    ? formatMoney(variants[0].compare_at_price)
+    : null;
+  const sku = variants[0].sku || 'N/A';
+
+  const subTitle = metafields?.custom?.sub_title || 'No subtitle available.';
+  const shortDescription =
+    metafields?.custom?.product_short_description || 'No short description available.';
+  const customPriceDetails =
+    metafields?.custom?.price_details || 'No additional price details available.';
+
+  const variantList = variants
+    .map(
+      (variant) =>
+        // `<option value="${variant.id}">${variant.title} - ${formatMoney(variant.price)} ${variant.sku ? `(SKU: ${variant.sku})` : ''}</option>`
+        `<option value="${variant.id}">${variant.title} - ${formatMoney(variant.price)} </option>`
+    )
+    .join('');
+
+  document.querySelector(container).innerHTML = `    
+  
+    <div class="product-detail-card">
+        <div class="compare-products-row">
+          <div class="compare-products-image col-md-12 ">
+             <img src="${image}" alt="${title}" />
+          </div>
+          <div class="col-md-4"><b>Product Name:-</b></div>
+          <div class=" col-md-8"><h3 class="compare-products-title">${title}</h3></div>
+          <hr>
+          <div class="col-md-4"><b>Price:-</b></div>
+          <div class="col-md-8">${price}</div>
+          <hr>
+          <div class="col-md-4"><b>Compare Price:-</b></div>
+          <div class="col-md-8 ">${comparePrice ? `${comparePrice}` : ''}</div>
+          <hr>
+          <div class="col-md-4"><b>SKU:-</b></div>
+          <div class="col-md-8">${sku}</div>
+          <hr>
+          <div class="col-md-4" style="align-items: flex-start;"><div class="compare-products-description-name"><b>Description:-</b></div></div>
+          <div class="col-md-8"><div class="compare-products-description">${description || 'No description available.'}</div></div>
+          <hr>
+          <div class="col-md-4"><b>Variants:-</b></div>
+          <div class="col-md-8"><div class="compare-variants"><select class="variant-select">${variantList}</select></div></div>
+          <hr>
+          <div class="col-md-12" style="justify-content: center;"><div class="compare-products-addtocart"><button class="add-to-cart-button" data-dropdown-id="${dropdownId}">ADD TO CART</button></div></div>
+        </div>
+    </div> 
+  `;
+};
+
+const handleProductSelection = async (dropdownId, detailsContainer) => {
+  const dropdown = document.getElementById(dropdownId);
+  dropdown.addEventListener('change', async () => {
+    const productHandle = dropdown.value;
+    if (!productHandle) {
+      document.querySelector(detailsContainer).innerHTML = ''; 
+      return;
+    }
+
+    try {
+      const product = await fetchProductDetails(productHandle);
+
+      const metafields = {
+        custom: {
+          sub_title: '{{ product.metafields.custom.sub_title }}',
+          product_short_description: '{{ product.metafields.custom.product_short_description }}',
+          price_details: '{{ product.metafields.custom.price_details }}',
+        },
+      };
+
+      renderProductDetails(detailsContainer, product, metafields, dropdownId);
+      handleAddToCart(); 
+    } catch (error) {
+      document.querySelector(detailsContainer).innerHTML =
+        '<p>Error loading product details. Please try again.</p>';
+    }
+  });
+};
+
+const handleAddToCart = () => {
+  document.querySelectorAll('.add-to-cart-button').forEach((button) => {
+    button.addEventListener('click', async (event) => {
+      const button = event.target;
+      const dropdownId = button.getAttribute('data-dropdown-id');
+      const dropdown = document.getElementById(dropdownId);
+      const variantSelect = button.closest('.product-detail-card').querySelector('.variant-select');
+      const variantId = variantSelect.value;
+
+      if (!variantId) {
+        alert('Please select a variant.');
+        return;
+      }
+
+      try {
+        const response = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            id: variantId,
+            quantity: 1,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to add to cart.');
+        }
+
+        window.location.href = '/cart';
+      } catch (error) {
+        alert('Error adding to cart. Please try again.');
+        console.error('Add to cart error:', error);
+      }
+    });
+  });
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  handleProductSelection('product1', '#product1-details');
+  handleProductSelection('product2', '#product2-details');
+
+  handleAddToCart();
+});
+
+</script>
+
+
+{% schema %}
+  {
+    "name": "Compare Products",
+   
+  "presets": [
+    {
+      "category": "Compare Products",
+      "name": "Compare Products",
+      "settings": {}
+    }
+  ]
+  }
+{% endschema %}
